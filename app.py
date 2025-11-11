@@ -21,7 +21,8 @@ CORS(app)
 # Configuration
 X402_PRICE_PER_CHECK = float(os.getenv("X402_PRICE_PER_CHECK", "0.01"))
 X402_PAYMENT_TOKEN = os.getenv("X402_PAYMENT_TOKEN", "USDC")
-FREE_MODE = os.getenv("FREE_MODE", "true").lower() == "true"
+# Private API for internal bots - always free mode
+FREE_MODE = True
 PORT = int(os.getenv("PORT", "8000"))
 
 # Chain configurations
